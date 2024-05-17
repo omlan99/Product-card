@@ -1,4 +1,5 @@
   $Dark_cyan: hsl(158, 36%, 37%);
+  $Dark_cyan_2: hsl(158, 36%, 25);
   $Cream: hsl(30, 38%, 92%);
   $Very_dark_blue: hsl(212, 21%, 14%);
   $Dark_grayish_blue: hsl(228, 12%, 48%);
@@ -65,7 +66,6 @@ body{
   background-color: $Cream;
   margin: 1rem;
 
-
   $details_padding:1.5rem;
   $details_spacing: 0.8rem;
   .container{
@@ -74,11 +74,13 @@ body{
     overflow: hidden;
     max-width: 600px;
     @media (min-width:600px) {
- 
+      
         display: flex;
-        margin: auto 0;
+        margin: auto ;
+        justify-content: center;
+        align-items: center;
         // min-height: 100vh;
-        // grid-template-columns: 1fr 1fr;
+       
     }
     
     
@@ -88,8 +90,11 @@ body{
   
   .product_details{
     padding: $details_padding;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
     gap: $details_spacing;
+    
 
     .catageory{
       letter-spacing: 5px;
@@ -130,7 +135,8 @@ body{
         font-size: 0.7rem;
       }
     }
-    button{
+    .button{
+      cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -143,8 +149,11 @@ body{
       font-weight: $fw_bold;
       border-radius: 0.5rem;
      
-      
+     &:hover{
+        background-color: $Dark_cyan_2;
+      }
     }
+
   }
 }
 }
