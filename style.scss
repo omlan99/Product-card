@@ -106,16 +106,27 @@ body{
     .description{
       font-size: 0.75rem;
     }
+    
     .price{
       display: flex;
       align-items: center;
-      h2{
+      .visually_hidden:not(:focus):not(:active) {
+        clip: rect(0 0 0 0); 
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap; 
+        width: 1px;
+      }
+      .current_price{
         font-family: $heading_font;
         color: $Dark_cyan;
         font-size: 1.6rem;
         margin-right: 1.2rem;
+        
       }
-      span{
+      .pre_price{
         font-size: 0.7rem;
       }
     }

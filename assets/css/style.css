@@ -102,13 +102,23 @@ body .container .product_details .price {
       -ms-flex-align: center;
           align-items: center;
 }
-body .container .product_details .price h2 {
+body .container .product_details .price .visually_hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+body .container .product_details .price .current_price {
   font-family: "Fraunces", serif;
   color: hsl(158, 36%, 37%);
   font-size: 1.6rem;
   margin-right: 1.2rem;
 }
-body .container .product_details .price span {
+body .container .product_details .price .pre_price {
   font-size: 0.7rem;
 }
 body .container .product_details button {
